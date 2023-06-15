@@ -2,8 +2,8 @@
 int
 main()
 {
-int (x);
-for (x = 'z'; x >= 'a'; x++)
+int x;
+for (x = 'z'; x >= 'a'; x--)
 {
 putchar(x);
 }
