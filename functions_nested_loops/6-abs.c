@@ -5,7 +5,6 @@
 int
 _abs(int n)
 {
-int num;
 	if (n < 0)
 	{
 		return (-n);
