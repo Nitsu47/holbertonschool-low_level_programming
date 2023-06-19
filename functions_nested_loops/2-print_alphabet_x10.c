@@ -8,11 +8,12 @@ char a = 97;
 int b = 0;
 while (b <= 9)
 {
-for (a = 97; a < 123; a++)
+for (a = 97; a <= 122; a++)
 {
 _putchar(a);
 }
-}
+
 _putchar('\n');
 b++;
+}
 }
