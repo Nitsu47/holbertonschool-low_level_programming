@@ -4,8 +4,6 @@
 int
 print_sign(int n)
 {
-	for (n = 48; n <= 57; n++)
-	{
 		if (n > 48)
 		{
 			_putchar ('+');
@@ -21,5 +19,4 @@ print_sign(int n)
 			_putchar ('-');
 			return (-1);
 		}
-	}
 }
