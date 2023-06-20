@@ -6,9 +6,9 @@ jack_bauer(void)
 {
 int h;
 int t;
-for (h = '0'; h < 24; h++)
+for (h = 0; h < 24; h++)
 {
-for (t = '0'; t < 60; t++)
+for (t = 0; t < 60; t++)
 {
 putchar('0' + (h / 10));
 putchar('0' + (h % 10));
