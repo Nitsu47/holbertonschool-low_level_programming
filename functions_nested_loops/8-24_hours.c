@@ -11,7 +11,7 @@ for (t = 0; t < 60; t++)
 {
 _putchar('0' + (h / 10));
 _putchar('0' + (h % 10));
-_putchar (':');
+_putchar(':');
 _putchar('0' + (t / 10));
 _putchar('0' + (t % 10));
 _putchar('\n');
