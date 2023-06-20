@@ -5,12 +5,12 @@ void
 times_table(void)
 {
 int x, y;
-int z = x * y;
 
 for (x = 0; x < 10; x++)
 {
 for (y = 0; x < 10; y++)
 {
+int z = x * y;
 if ((x / 10) == 0)
 {
 putchar (' ');
