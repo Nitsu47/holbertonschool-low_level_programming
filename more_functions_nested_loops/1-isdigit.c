@@ -8,8 +8,5 @@ if (c <= 9)
 {
 return (1);
 }
-else
-{
 return (0);
-}
 }
