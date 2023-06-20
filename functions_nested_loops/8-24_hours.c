@@ -10,12 +10,12 @@ for (h = 0; h < 24; h++)
 {
 for (t = 0; t < 60; t++)
 {
-putchar('0' + (h / 10));
-putchar('0' + (h % 10));
-putchar (':');
-putchar('0' + (t / 10));
-putchar('0' + (t % 10));
-putchar('\n');
+_putchar('0' + (h / 10));
+_putchar('0' + (h % 10));
+_putchar (':');
+_putchar('0' + (t / 10));
+_putchar('0' + (t % 10));
+_putchar('\n');
 }
 }
 }
