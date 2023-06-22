@@ -14,6 +14,7 @@ char a = *str;
 while (a != '\0')
 {
 _putchar (a);
+a++;
 }
 _putchar ('\n');
 }
