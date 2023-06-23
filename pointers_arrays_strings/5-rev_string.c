@@ -14,7 +14,6 @@ int r = 0;
 char p;
 while (s[l] != '\0')
 {
-_putchar(l);
 l++;
 }
 while (r < l--)
