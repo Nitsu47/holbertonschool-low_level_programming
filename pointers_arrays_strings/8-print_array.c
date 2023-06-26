@@ -14,7 +14,7 @@ int x = 0;
 
 	for (x = 0; x <= n; x++)
 	{
-		printf("%d\n", a[x]);
+		printf("%d", a[x]);
 
 		if (x == n - 1)
 			continue;
