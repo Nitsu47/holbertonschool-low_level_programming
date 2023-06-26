@@ -11,16 +11,18 @@
 void print_array(int *a, int n)
 {
 int x = 0;
-
-	while (x != '\0')
+int y = 0;
+	while (a[x] != '\0')
 	{
 		x++;
 	}
-	for (n = 0; n < x; n++)
+	for (y = 0; y <= n; y++)
 	{
-		printf("%i\n", a[n]);
+		printf("%i\n", a[x]);
+	if (y < n)
 		printf(",");
 		printf(" ");
+		break;
 	}
 _putchar('\n');
 }
