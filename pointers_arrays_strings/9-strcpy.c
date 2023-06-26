@@ -17,5 +17,6 @@ int a = 0;
 		dest[a] = src[a];
 		a++;
 	}
-return (dest);
+	dest[a] = '\0';
+	return (dest);
 }
