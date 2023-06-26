@@ -16,8 +16,8 @@ int x = 0;
 	{
 		printf("%d\n", a[x]);
 
-	if (x == n - 1)
-		continue;
+		if (x == n - 1)
+			continue;
 
 		printf(", ");
 	}
