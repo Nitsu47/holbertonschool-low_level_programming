@@ -31,5 +31,5 @@ int z = -1;
 	}
 		if (z < 0)
 			x *= -1;
-	return (0);
+	return (y);
 }
