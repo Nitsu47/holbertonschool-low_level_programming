@@ -14,9 +14,11 @@ int up = 0;
 	{
 		if (a[up] >= 97 && a[up] <= 122)
 		{
+			if (a[up] == 0)
+			{
 			a[up] = a[up] - 32;
-		}
-			switch (a[up - 1])
+			}
+			switch (a[up + 1])
 			{
 				case 3:
 				case 9:
@@ -33,6 +35,7 @@ int up = 0;
 				case 125:
 				a[up] = a[up] - 32;
 			}
+		}
 		up++;
 	}
 	return (a);
