@@ -36,6 +36,7 @@ int up = 0;
 				a[up] = a[up] - 32;
 			}
 		}
+		up++;
 	}
 	return (a);
 }
