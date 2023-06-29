@@ -17,5 +17,6 @@ int l = 0;
 	if (l)
 	{
 		_putchar(s[l--]);
+		_putchar(s[l + 1]);
 	}
 }
