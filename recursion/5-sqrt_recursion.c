@@ -3,7 +3,7 @@
 int
 _sqrt_recursion(int n)
 {
-int y = 1;
+	int y = 1;
 
 	y = aux(n, y);
 	return (y);
@@ -12,7 +12,7 @@ int y = 1;
 int
 aux(int n, int y)
 {
-	if (n == (y *y))
+	if (n == (y * y))
 	{
 		return (n);
 	}
