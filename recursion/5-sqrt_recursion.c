@@ -6,7 +6,7 @@ _sqrt_recursion(int n)
 	int y = 1;
 
 	y = aux(n, y);
-	return (y);
+	return (aux(n, y));
 }
 
 int
