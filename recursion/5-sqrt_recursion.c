@@ -12,7 +12,7 @@ int y = 1;
 int
 aux(int n, int y)
 {
-	if (n == (y * y))
+	if (n == (y *y))
 	{
 		return (n);
 	}
