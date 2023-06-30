@@ -16,13 +16,10 @@ aux(int n, int y)
 	{
 		return (n);
 	}
-	else if (n == y || y < 0)
+	else if (y < 0)
 	{
 		return (-1);
 	}
 	else
-	{
-		y++;
-	}
-	return (aux(n, y));
+		return (aux(n, y + 1));
 }
