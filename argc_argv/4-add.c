@@ -6,23 +6,21 @@ int
 main(int argc, char *argv[])
 {
 	int r = 0;
-	int c = 1;
-	int n = 0;
+	int c;
+	int n;
 
-	while (c < argc)
+	while (argc-- > 1)
 	{
-		while (argv[c][n])
+		for (c = 0; argv[argc][c]; c++)
 		{
 			if (argv[c][n] < 48 || argv[c][n] > 59)
 			{
 				printf("Error\n");
 				return (1);
 			}
-			n++;
 		}
-		n = 0;
-		r += atoi(argv[c]);
-		n++;
+		n = atoi(argv[argc]);
+		r += n;
 	}
 	printf("%d\n", r);
 	return (0);
