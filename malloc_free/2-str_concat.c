@@ -17,20 +17,23 @@ char *str_concat(char *s1, char *s2)
 
 	char *total;
 
-	if (s1 == NULL)
-		return (NULL);
-
-	if (s2 == NULL)
-		return (NULL);
+	if (s1 == NULL && s2 == NULL)
+	{
+		total = malloc(sizeof(char) * 1);
+		return (total);
+	}
 
 	total = malloc(sizeof(char) * (new + 1));
 
 	if (total == NULL)
 		return (NULL);
 
+	if (s1 != NULL || s2 != NULL)
+	{
 	memcpy(total, s1, l1 * sizeof(char));
 
 	memcpy(total + l1, s2, l2 * sizeof(char));
+	}
 
 	total[new] = '\0';
 
