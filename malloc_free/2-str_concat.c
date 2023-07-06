@@ -17,6 +17,12 @@ char *str_concat(char *s1, char *s2)
 
 	char *total;
 
+	if (s1 == NULL)
+		return (NULL);
+
+	if (s2 == NULL)
+		return (NULL);
+
 	total = malloc(sizeof(char) * (new + 1));
 
 	if (total == NULL)
