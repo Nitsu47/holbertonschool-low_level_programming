@@ -24,6 +24,11 @@ char *str_concat(char *s1, char *s2)
 	if (s1 || s2)
 		new = l1 + l2;
 
+	if (!s1)
+		l1 = 0;
+	if (!s2)
+		l2 = 0;
+
 	if (s1 == NULL && s2 == NULL)
 	{
 		total = malloc(sizeof(char) * 1);
@@ -35,10 +40,6 @@ char *str_concat(char *s1, char *s2)
 	if (total == NULL)
 		return (NULL);
 
-	if (!s1)
-		return (NULL);
-	if (!s2)
-		return (NULL);
 
 	memcpy(total, s1, l1 * sizeof(char));
 
