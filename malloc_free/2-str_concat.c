@@ -21,13 +21,14 @@ char *str_concat(char *s1, char *s2)
 		l1 = strlen(s1);
 	if (s2)
 		l2 = strlen(s2);
-	if (s1 || s2)
-		new = l1 + l2;
 
 	if (!s1)
 		l1 = 0;
 	if (!s2)
 		l2 = 0;
+
+	if (s1 || s2)
+		new = l1 + l2;
 
 	if (s1 == NULL && s2 == NULL)
 	{
