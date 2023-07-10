@@ -9,17 +9,18 @@ int
 	int w = 0;
 	int **array;
 
+	if (width <= 0 || height <= 0)
+		return (NULL);
+
 	array = (int **)malloc(sizeof(int) * height);
 
 	if (array == NULL)
 		return (NULL);
 
-	if (width <= 0 || height <= 0)
-		return (NULL);
-
 	while (w < height)
 	{
 		array[w] = (int *)malloc(sizeof(int) * width);
+
 		if (array[w] == NULL)
 		{
 			while (w >= 0)
