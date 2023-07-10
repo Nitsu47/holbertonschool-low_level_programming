@@ -9,7 +9,7 @@ int
 	int w = 0;
 	int **array;
 
-	array = (int **)malloc(sizeof(int *) * width);
+	array = (int **)malloc(sizeof(int) * width);
 
 	if (array == NULL)
 		return (NULL);
