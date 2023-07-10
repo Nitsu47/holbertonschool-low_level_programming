@@ -1,44 +1,46 @@
 #include "main.h"
+#include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
-
 int
 **alloc_grid(int width, int height)
 {
-	int x = 0;
-	int w = 0;
-	int **array;
+	int i = 0;
+	int k = 0;
+	int **grid;
 
-	if (width <= 0 || height <= 0)
+	if (width < 1 || height < 1)
+
 		return (NULL);
 
-	array = (int **)malloc(sizeof(int) * height);
+	grid = (int **)malloc(height * sizeof(int *));
 
-	if (array == NULL)
-		return (NULL);
-
-	while (w < height)
+	if (grid == NULL)
 	{
-		array[w] = (int *)malloc(sizeof(int) * width);
+		return (NULL);
+	}
+	while (i < height)
+	{
+		grid[i] = (int *)malloc(sizeof(int) * width);
 
-		if (array[w] == NULL)
+	if (grid[i] == NULL)
+	{
+		while (i >= 0)
 		{
-			while (w >= 0)
-			{
-				free(array[w]);
-				w--;
-			}
-			free(array);
-			return (NULL);
+			free(grid[i]);
+			i--;
 		}
-		w++;
+
+		free(grid);
+		return (NULL);
 	}
-	w = 0;
-	while (w < height)
+	i++;
+	}
+	i = 0;
+	while (i < height)
 	{
-		for (x = 0; x < width; x++)
-			array[w][x] = 0;
-		w++;
+	for (k = 0; k < width; k++)
+		grid[i][k] = 0;
+	i++;
 	}
-	return (array);
+	return (grid);
 }
