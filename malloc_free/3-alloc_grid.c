@@ -19,7 +19,7 @@ int
 
 	while (w < height)
 	{
-		array[w] = (int *)malloc(sizeof(int) * width);
+		array[w] = (int *)malloc(sizeof(int) * height);
 		if (array[w] == NULL)
 		{
 			while (w >= 0)
