@@ -31,7 +31,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 
 	if (total == NULL)
 		return (NULL);
-	for (x = 0; x < l1; x++)
+	for (x = 0; x < l1 + l2; x++)
 	{
 		if (x < l1)
 			total[l1] = s1[x];
