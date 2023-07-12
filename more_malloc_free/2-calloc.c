@@ -21,12 +21,12 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	while (y < size)
 		y++;
 
-	po = malloc(sizeof(int) * x + y + 1);
+	po = malloc(sizeof(int) * ((x + y) + 1));
 
 	if (po == NULL)
 		return (NULL);
 
-	memset(po, 0, sizeof(int) * (x + y + 1));
+	memset(po, 0, sizeof(int) * ((x + y) + 1));
 
 	return (po);
 }
