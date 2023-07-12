@@ -11,22 +11,17 @@
 
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
-	unsigned int *po, x = 0, y = 0;
+	unsigned int *po;
 
 	if (nmemb == 0 || size == 0)
 		return (NULL);
 
-	while (x < nmemb)
-		x++;
-	while (y < size)
-		y++;
-
-	po = malloc(sizeof(x * y) + 1);
+	po = malloc(sizeof(int) * (nmemb * size) + 4);
 
 	if (po == NULL)
 		return (NULL);
 
-	memset(po, 0, sizeof(x * y) + 1);
+	memset(po, 0, sizeof(int) * (nmemb * size) + 4);
 
 	return (po);
 }
