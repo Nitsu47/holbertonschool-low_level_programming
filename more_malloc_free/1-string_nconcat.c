@@ -13,10 +13,9 @@
 
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	size_t l1;
-	size_t l2;
-	size_t x;
-
+	unsigned int l1;
+	unsigned int l2;
+	unsigned int x;
 	char *total;
 
 	if (s1 == NULL)
@@ -34,7 +33,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	for (x = 0; x < l1 + l2; x++)
 	{
 		if (x < l1)
-			total[l1] = s1[x];
+			total[x] = s1[x];
 		if (x <= l1)
 			total[x] = s2[x - l1];
 	}
