@@ -21,7 +21,7 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 		y++;
 
 	po = malloc(sizeof(int) * (x + y + 1));
-
+	free(po);
 	if (po == NULL)
 		return (NULL);
 
