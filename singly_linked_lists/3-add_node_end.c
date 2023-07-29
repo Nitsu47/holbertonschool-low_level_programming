@@ -12,21 +12,31 @@ list_t *add_node_end(list_t **head, const char *str)
 
 	spacex = malloc(sizeof(list_t));
 
-	spacex->str = strdup(str);
 	if (spacex == NULL)
 		return (NULL);
+
+	spacex->str = strdup(str);
+
+	if (spacex->str == NULL)
+	{
+		free(spacex);
+		return (NULL);
+	}
 
 	spacex->len = strlen(str);
 	spacex->next = NULL;
 
 	if (*head == NULL)
+	{
 		*head = spacex;
+	}
 	else
 	{
 		lastn = *head;
 		while (lastn->next != NULL)
 			lastn = lastn->next;
+		lastn->next = spacex;
 	}
-	*head = spacex->next;
+
 	return (spacex);
 }
