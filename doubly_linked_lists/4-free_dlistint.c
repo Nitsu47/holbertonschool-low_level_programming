@@ -5,6 +5,13 @@
  */
 void free_dlistint(dlistint_t *head)
 {
-	while (head != NULL)
-		free(head);
+	dlistint_t *actual = head;
+	dlistint_t *fnode;
+
+	while (actual != NULL)
+	{
+		fnode = actual;
+		actual = actual->next;
+		free(fnode);
+	}
 }
